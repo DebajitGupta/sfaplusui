@@ -1,0 +1,122 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <nav class="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Company Subscription Details</li>
+            </ol>
+            <div class="ml-auto">
+                <button type="button" class="btn bg-gradient-primary" ng-click="SubmitSubscriptionData(e)">Submit</button>
+            </div>
+        </nav>
+    </div><!-- /.container-fluid -->
+</div>
+
+
+<div role="main">
+    <div ng-controller="">
+
+        <div class="col-lg-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Add Company Subscription Details Master</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group mb-0">
+                                <select class="form-control" name="mname">
+                                    <option>Select Company Name</option>
+                                    <option>option 2</option>
+                                    <option>option 3</option>
+                                    <option>option 4</option>
+                                    <option>option 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group mb-0">
+                                <select class="form-control" name="mname">
+                                    <option>Select Model</option>
+                                    <option>option 2</option>
+                                    <option>option 3</option>
+                                    <option>option 4</option>
+                                    <option>option 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="card card-primary">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter No of Emp User">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter Pricing Cost User">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter No of Vendor User">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter Pricing Other User">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter Pricing Emp User">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter No of Influencer User">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter Pricing Vendor User">
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                    </div>
+                                    <input type="date" class="form-control" name="edate" placeholder="Effective Date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter No of Cost User">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter Pricing Influencer">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter No of Other User">
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                    </div>
+                                    <input type="date" class="form-control" name="edate" placeholder="Effective Date">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

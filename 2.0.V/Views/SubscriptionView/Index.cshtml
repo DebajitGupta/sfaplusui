@@ -1,0 +1,131 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+<script>
+    $("#profileImage").click(function (e) {
+        $("#imageUpload").click();
+    });
+    function fasterPreview(uploader) {
+        if (uploader.files && uploader.files[0]) {
+            $('#profileImage').attr('src',
+                window.URL.createObjectURL(uploader.files[0]));
+        }
+    }
+    $("#imageUpload").change(function () {
+        fasterPreview(this);
+    });
+</script>
+<div role="main">
+    <div >
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <nav class="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">View Subscription</li>
+                    </ol>
+                    <div class="ml-auto">
+
+                        <input type="button" class="btn bg-gradient-primary" value="Add" onclick="@("window.location.href='" + @Url.Action("Index", "SubscriptionDetails") + "'");" />
+                    </div>
+                </nav>
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+        <!-- Main content -->
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    @*<div class="col-lg-12">
+                        <div class="alert alert-success alert-dismissible {{Successjs}}">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>Success!</strong> {{Successmsg}}.
+                        </div>
+                        <div class="alert alert-info alert-dismissible d-none">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+                        </div>
+                        <div class="alert alert-warning alert-dismissible d-none">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+                        </div>
+                        <div class="alert alert-danger alert-dismissible {{Errorjs}}">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>Danger!</strong> {{Errormsg}}.
+                        </div>
+                    </div>*@
+                
+                    <div class="col-lg-12">
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h3 class="card-title">View Subscription</h3>
+                            </div>
+                            <div class="card-body">
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Action</th>
+                                            <th>Model Name</th>
+                                            <th>No of Employee User</th>
+                                            <th>No of Customer User</th>
+                                            <th>No of Influencer User</th>
+                                            <th>No of Vendor User</th>
+                                            <th>No of Other User</th>
+                                            <th>Employee User Cost</th>
+                                            <th>Customer User Cost</th>
+                                            <th>Influencer Cost</th>
+                                            <th>Vendor Cost</th>
+                                            <th>Other User Cost</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th style="width:120px;"><button class="btn btn-default btn3d"><i class="fa fa-search"></i></button> <button class="btn btn-default btn3d"><i class="fa fa-sync"></i></button></th>
+                                            <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                            <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                            <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                            <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                            <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                            <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                            <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                            <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                            <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                            <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                            <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                        </tr>
+                                        <tr ng-repeat="tmp in TempDAta">
+                                            <td> </td>
+                                            <td>{{tmp.ModelName}}</td>
+                                            <td>{{tmp.EmployeeUser}}</td>
+                                            <td>{{tmp.CustomerUser}}</td>
+                                            <td>{{tmp.InfluencerUser}}</td>
+                                            <td>{{tmp.VendorUser}}</td>
+                                            <td>{{tmp.OtherUser}}</td>
+                                            <td>{{tmp.EmpUserCost}}</td>
+                                            <td>{{tmp.CustUserCost}}</td>
+                                            <td>{{tmp.InfluencerCost}}</td>
+                                            <td>{{tmp.VendorUserCost}}</td>
+                                            <td>{{tmp.OthrUserCost}}</td>
+                                            <td>
+                                                <input type="button" value="Remove" class="btn bg-gradient-primary" ng-click="removeRow(tmp.ModelName,tmp.EmployeeUser,tmp.CustomerUser)" />
+                                            </td>
+                                        </tr>
+
+</table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content -->
+    </div>
+</div>

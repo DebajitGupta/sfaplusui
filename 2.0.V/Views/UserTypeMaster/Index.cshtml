@@ -1,0 +1,115 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <nav class="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">User Type Entry</li>
+            </ol>
+            <div class="ml-auto">
+                <button type="button" class="btn bg-gradient-primary" data-toggle="modal" data-target="#addUser">Add</button> &nbsp;
+            </div>
+        </nav>
+    </div><!-- /.container-fluid -->
+</div>
+
+
+<div role="main">
+    <div ng-controller="">
+
+        <div class="col-lg-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">View User Type</h3>
+                </div>
+                <div class="card-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                      
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>User Type Name</th>
+                                <th>Status</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th style="width:120px;"><button class="btn btn-default btn3d"><i class="fa fa-search"></i></button> <button class="btn btn-default btn3d"><i class="fa fa-sync"></i></button></th>
+                                <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                            </tr>
+                            <tr>
+                                <td><a href="#"><i class="fa fa-edit"></i></a> &nbsp; <a href="#"><i class="fa fa-eye"></i></a></td>
+
+                                <td>Trident</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#"><i class="fa fa-edit"></i></a> &nbsp; <a href="#"><i class="fa fa-eye"></i></a></td>
+
+                                <td>Trident</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#"><i class="fa fa-edit"></i></a> &nbsp; <a href="#"><i class="fa fa-eye"></i></a></td>
+
+                                <td>Trident</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#"><i class="fa fa-edit"></i></a> &nbsp; <a href="#"><i class="fa fa-eye"></i></a></td>
+
+                                <td>Trident</td>
+                                <td>Active</td>
+                            </tr>
+</table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Modal -->
+<div id="addUser" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add User Type</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="noemployee" placeholder="Enter User Type">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox pt-2">
+                                <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                <label for="customCheckbox1" class="custom-control-label">Active</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox pt-2">
+                                <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option1">
+                                <label for="customCheckbox2" class="custom-control-label">Non Active</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn bg-gradient-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

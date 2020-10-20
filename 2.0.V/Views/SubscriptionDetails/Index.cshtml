@@ -1,0 +1,184 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <script src="~/app/Service/SubscibtionModelSrvc.js"></script>
+    <script src="~/app/controllers/SubscibtionModelCtrl.js"></script>
+
+<div role="main" >
+    <div ng-controller="SubscibtionModelCtrl">
+   
+        
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <nav class="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Subscription View</li>
+                        </ol>
+                        <div class="ml-auto">
+                            <button type="button" class="btn bg-gradient-primary" ng-click="SubmitSubscriptionData(e)">Submit</button>
+                        </div>
+                    </nav>
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+            <!-- Main content -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="alert alert-success alert-dismissible {{Successjs}}">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                <strong>Success!</strong> {{Successmsg}}.
+                            </div>
+                            <div class="alert alert-info alert-dismissible d-none">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+                            </div>
+                            <div class="alert alert-warning alert-dismissible d-none">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+                            </div>
+                            <div class="alert alert-danger alert-dismissible {{Errorjs}}">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                <strong>Danger!</strong> {{Errormsg}}.
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Add Subscription</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="mname" placeholder="Enter Model Name" id="txtModelName" ng-model="txtModelName">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="nocustomer" placeholder="Enter No of Customer User" id="txtCustomerUser" ng-model="txtCustomerUser">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="customercost" placeholder="Enter Customer User Cost" id="txtCustUserCost" ng-model="txtCustUserCost">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="customercost" placeholder="Enter Other User Cost" id="txtOthrUserCost" ng-model="txtOthrUserCost">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="custom-control custom-checkbox pt-2">
+                                                    <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option1" checked>
+                                                    <label for="customCheckbox4" class="custom-control-label" id="txtActive" >Active</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="noemployee" placeholder="Enter No of Employee User" id="txtEmployeeUser" ng-model="txtEmployeeUser">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="novendor" placeholder="Enter No of Vendor User" id="txtVendorUser" ng-model="txtVendorUser">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="novendor" placeholder="Enter Employee User Cost" id="txtEmpUserCost" ng-model="txtEmpUserCost">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                                    </div>
+                                                    <input type="date" class="form-control" name="edate" placeholder="Effective Date" id="txtEffectiveDate" ng-model="txtEffectiveDate">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter No of Influencer User" id="txtInfluencerUser" ng-model="txtInfluencerUser">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter Influencer Cost" id="txtInfluencerCost" ng-model="txtInfluencerCost">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="noother" placeholder="Enter No of Other User" id="txtOtherUser" ng-model="txtOtherUser">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="novendor" placeholder="Enter Vendor User Cost" id="txtVendorUserCost" ng-model="txtVendorUserCost">
+                                            </div>
+                                            <div class="form-group text-right">
+                                                <button type="button" class="btn bg-gradient-primary" ng-click="clearSubscriptionData()">Reset</button> &nbsp; <button type="button" class="btn bg-gradient-primary" ng-click="addSubscriptionData(txtModelName,txtCustomerUser,txtCustUserCost,txtOthrUserCost,txtEmployeeUser,txtVendorUser,txtEmpUserCost,txtEffectiveDate,txtInfluencerUser,txtInfluencerCost,txtOtherUser,txtVendorUserCost,txtActive)">Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">View Subscription</h3>
+                                </div>
+                                <div class="card-body">
+                                    <table id="example1" class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Action</th>
+                                                <th>Model Name</th>
+                                                <th>No of Employee User</th>
+                                                <th>No of Customer User</th>
+                                                <th>No of Influencer User</th>
+                                                <th>No of Vendor User</th>
+                                                <th>No of Other User</th>
+                                                <th>Employee User Cost</th>
+                                                <th>Customer User Cost</th>
+                                                <th>Influencer Cost</th>
+                                                <th>Vendor Cost</th>
+                                                <th>Other User Cost</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th style="width:120px;"><button class="btn btn-default btn3d"><i class="fa fa-search"></i></button> <button class="btn btn-default btn3d"><i class="fa fa-sync"></i></button></th>
+                                                <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                                <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                                <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                                <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                                <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                                <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                                <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                                <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                                <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                                <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                                <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                            </tr>
+                                            <tr ng-repeat="tmp in TempDAta">
+                                                <td> </td>
+                                                <td>{{tmp.ModelName}}</td>
+                                                <td>{{tmp.EmployeeUser}}</td>
+                                                <td>{{tmp.CustomerUser}}</td>
+                                                <td>{{tmp.InfluencerUser}}</td>
+                                                <td>{{tmp.VendorUser}}</td>
+                                                <td>{{tmp.OtherUser}}</td>
+                                                <td>{{tmp.EmpUserCost}}</td>
+                                                <td>{{tmp.CustUserCost}}</td>
+                                                <td>{{tmp.InfluencerCost}}</td>
+                                                <td>{{tmp.VendorUserCost}}</td>
+                                                <td>{{tmp.OthrUserCost}}</td>
+                                                <td>
+                                                    <input type="button" value="Remove" class="btn bg-gradient-primary" ng-click="removeRow(tmp.ModelName,tmp.EmployeeUser,tmp.CustomerUser)" />
+                                                </td>
+                                            </tr>
+
+</table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content -->        
+    </div>
+</div>

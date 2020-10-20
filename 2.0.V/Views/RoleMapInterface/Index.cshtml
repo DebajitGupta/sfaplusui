@@ -1,0 +1,319 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <nav class="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Role Interface Mapping Master</li>
+            </ol>
+            <div class="ml-auto">
+                <button type="button" class="btn bg-gradient-primary" ng-click="SubmitSubscriptionData(e)">Submit</button>
+            </div>
+        </nav>
+    </div><!-- /.container-fluid -->
+</div>
+
+
+<div role="main">
+    <div ng-controller="">
+
+
+        <div class="col-lg-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Add Role Interface Mapping Master</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group mb-0">
+                                <select class="form-control" name="mname">
+                                    <option>Select Company Name</option>
+                                    <option>option 2</option>
+                                    <option>option 3</option>
+                                    <option>option 4</option>
+                                    <option>option 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group mb-0">
+                                <select class="form-control" name="mname">
+                                    <option>Select Role</option>
+                                    <option>option 2</option>
+                                    <option>option 3</option>
+                                    <option>option 4</option>
+                                    <option>option 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="card card-primary">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <select class="form-control" name="mname">
+                                    <option>Select Root Menu</option>
+                                    <option>option 2</option>
+                                    <option>option 3</option>
+                                    <option>option 4</option>
+                                    <option>option 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox pt-2">
+                                    <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option1">
+                                    <label for="customCheckbox4" class="custom-control-label">Enable All Permission</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4"></div>
+                    </div>
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Interface Name</th>
+                                <th>View Action</th>
+                                <th>Add Action</th>
+                                <th>Modify Action</th>
+                                <th>Delete Action</th>
+                                <th>Print Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td align="center" valign="middle">Interface Id 1</td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary1">
+                                            <label for="checkboxPrimary1">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary2">
+                                            <label for="checkboxPrimary2">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary3">
+                                            <label for="checkboxPrimary3">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary4">
+                                            <label for="checkboxPrimary4">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary5">
+                                            <label for="checkboxPrimary5">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="middle">Interface Id 2</td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary6">
+                                            <label for="checkboxPrimary6">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary7">
+                                            <label for="checkboxPrimary7">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary8">
+                                            <label for="checkboxPrimary8">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary9">
+                                            <label for="checkboxPrimary9">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary10">
+                                            <label for="checkboxPrimary10">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Role InfcAction View</h3>
+                </div>
+                <div class="card-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Interface Name</th>
+                                <th>View Action</th>
+                                <th>Add Action</th>
+                                <th>Modify Action</th>
+                                <th>Delete Action</th>
+                                <th>Print Action</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td align="center" valign="middle">Interface Id 1</td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary11">
+                                            <label for="checkboxPrimary11">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary12">
+                                            <label for="checkboxPrimary12">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary13">
+                                            <label for="checkboxPrimary13">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary14">
+                                            <label for="checkboxPrimary14">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary15">
+                                            <label for="checkboxPrimary15">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="middle"><a href="#"><i class="fa fa-trash"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="middle">Interface Id 2</td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary16">
+                                            <label for="checkboxPrimary16">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary17">
+                                            <label for="checkboxPrimary17">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary18">
+                                            <label for="checkboxPrimary18">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary19">
+                                            <label for="checkboxPrimary19">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="middle">
+                                    <div class="form-group">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="checkboxPrimary20">
+                                            <label for="checkboxPrimary20">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="middle"><a href="#"><i class="fa fa-trash"></i></a></td>
+                            </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

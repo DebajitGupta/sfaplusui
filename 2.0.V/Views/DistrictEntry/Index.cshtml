@@ -1,0 +1,157 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <nav class="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">District Entry</li>
+            </ol>
+            <div class="ml-auto">
+                <button type="button" class="btn bg-gradient-primary" data-toggle="modal" data-target="#addDistrict">Add</button> &nbsp;  <button type="button" class="btn bg-gradient-primary" ng-click="SubmitSubscriptionData(e)">Submit</button>
+            </div>
+        </nav>
+        <a href="~/Views/DistrictEntry/Index.cshtml"></a>
+    </div><!-- /.container-fluid -->
+</div>
+
+
+<div role="main">
+    <div ng-controller="">
+        <div class="col-lg-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">View District</h3>
+                </div>
+                <div class="card-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                     
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>Country Name</th>
+                                <th>State Name</th>
+                                <th>Distric Name</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th style="width:120px;"><button class="btn btn-default btn3d"><i class="fa fa-search"></i></button> <button class="btn btn-default btn3d"><i class="fa fa-sync"></i></button></th>
+                                <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                                <th align="center" valign="middle"><input type="text" class="form-control" placeholder="Search.."></th>
+                            </tr>
+                            <tr>
+                                <td><a href="#"><i class="fa fa-edit"></i></a> &nbsp; <a href="#"><i class="fa fa-eye"></i></a></td>
+
+                                <td>Trident</td>
+                                <td>
+                                    Internet Explorer 4.0
+                                </td>
+                                <td>Win 95+</td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#"><i class="fa fa-edit"></i></a> &nbsp; <a href="#"><i class="fa fa-eye"></i></a></td>
+
+                                <td>Trident</td>
+                                <td>
+                                    Internet Explorer 4.0
+                                </td>
+                                <td>Win 95+</td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#"><i class="fa fa-edit"></i></a> &nbsp; <a href="#"><i class="fa fa-eye"></i></a></td>
+
+                                <td>Trident</td>
+                                <td>
+                                    Internet Explorer 4.0
+                                </td>
+                                <td>Win 95+</td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#"><i class="fa fa-edit"></i></a> &nbsp; <a href="#"><i class="fa fa-eye"></i></a></td>
+
+                                <td>Trident</td>
+                                <td>
+                                    Internet Explorer 4.0
+                                </td>
+                                <td>Win 95+</td>
+
+                            </tr>
+</table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="addDistrict" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add District</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <select class="form-control" name="mname">
+                                <option>Select Country</option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                                <option>option 5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <select class="form-control" name="mname">
+                                <option>Select State</option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                                <option>option 5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="noemployee" placeholder="Enter District Name">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox pt-2">
+                                <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                <label for="customCheckbox1" class="custom-control-label">Active</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox pt-2">
+                                <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option1">
+                                <label for="customCheckbox2" class="custom-control-label">Non Active</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn bg-gradient-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

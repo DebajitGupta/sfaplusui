@@ -1,0 +1,268 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <nav class="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Company Master</li>
+            </ol>
+            <div class="ml-auto">
+                <button type="button" class="btn bg-gradient-primary" ng-click="SubmitSubscriptionData(e)">Submit</button>
+            </div>
+        </nav>
+    </div><!-- /.container-fluid -->
+</div>
+
+
+<div role="main">
+    <div ng-controller="">
+
+        <div class="col-lg-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Add Company</h3>
+                </div>
+                <div class="card-body">
+                    <div class="card">
+                        <div class="card-header p-2">
+                            <ul class="nav nav-pills" id="add-company">
+                                <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Company Details</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Brand Details</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Contact Details</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#account" data-toggle="tab">Account Details</a></li>
+                            </ul>
+                        </div><!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="tab-content">
+                                <div class="active tab-pane" id="activity">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter Company Name">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter PAN No.">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter Company Code">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter TAN No.">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter GST No.">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter Contact Person Name">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter Company Website">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter Remarks">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter Contact Person Phone No.">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                                    </div>
+                                                    <input type="date" class="form-control" name="edate" placeholder="Effective Date">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="custom-control custom-checkbox pt-2">
+                                                    <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option1">
+                                                    <label for="customCheckbox4" class="custom-control-label">Active</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" name="noinfluencer" placeholder="Enter Email">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="noinfluencer" placeholder="Enter Maximum User Limit">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-lg-4"></div>
+                                        <div class="col-lg-4"></div>
+                                        <div class="col-lg-4 text-right"><button type="button" class="btn bg-gradient-primary">Back</button> &nbsp; <button type="button" class="btn bg-gradient-primary">Save</button></div>
+                                    </div>
+                                </div>
+                                <!-- /.tab-pane -->
+                                <div class="tab-pane" id="timeline">
+                                    <div class="row">
+                                        <div class="col-lg-3 text-center">
+                                            <label>Select Page Logo</label>
+                                            <div class="image-container">
+                                                <div class="form-group">
+                                                    <div id="profile-container1">
+                                                        <image id="profileImage1" src="images/noimage.png" />
+                                                    </div>
+                                                    <input id="imageUpload1" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="pan" placeholder="Enter Header Text 1">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="tax" placeholder="Enter Footer Text 1">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="pan" placeholder="Enter Web Header Text">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="custom-control custom-checkbox pt-2">
+                                                    <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option1">
+                                                    <label for="customCheckbox4" class="custom-control-label">Active</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="pan" placeholder="Enter Header Text 2">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="pan" placeholder="Enter Footer Text 2">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" name="gst" placeholder="Enter web Footer Text">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 text-center">
+                                            <label>Select Login Logo</label>
+                                            <div class="image-container">
+                                                <div class="form-group">
+                                                    <div id="profile-container2">
+                                                        <image id="profileImage2" src="images/noimage.png" />
+                                                    </div>
+                                                    <input id="imageUpload2" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-lg-4"></div>
+                                        <div class="col-lg-4"></div>
+                                        <div class="col-lg-4 text-right"><button type="button" class="btn bg-gradient-primary">Back</button> &nbsp; <button type="button" class="btn bg-gradient-primary">Save</button></div>
+                                    </div>
+                                </div>
+                                <!-- /.tab-pane -->
+
+                                <div class="tab-pane" id="settings">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="name" placeholder="Enter Contact Person Name">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="name" placeholder="Enter Designation">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="custom-control custom-checkbox pt-2">
+                                                    <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option1">
+                                                    <label for="customCheckbox4" class="custom-control-label">Active</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="phone" placeholder="Enter Code">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="phone" placeholder="Enter Contact Number 1">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" name="email" placeholder="Enter Email">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="phone" placeholder="Enter Contact Number 2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-lg-4"></div>
+                                        <div class="col-lg-4"></div>
+                                        <div class="col-lg-4 text-right"><button type="button" class="btn bg-gradient-primary">Back</button> &nbsp; <button type="button" class="btn bg-gradient-primary">Save</button></div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="account">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <select class="form-control" name="mname">
+                                                    <option>Select Company</option>
+                                                    <option>option 2</option>
+                                                    <option>option 3</option>
+                                                    <option>option 4</option>
+                                                    <option>option 5</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="name" placeholder="Enter Branch Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="phone" placeholder="Enter Account Number">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="phone" placeholder="Enter IFSC Code">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="email" placeholder="Enter Bank Name">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="custom-control custom-checkbox pt-2">
+                                                    <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option1">
+                                                    <label for="customCheckbox4" class="custom-control-label">Active</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-lg-4"></div>
+                                        <div class="col-lg-4"></div>
+                                        <div class="col-lg-4 text-right"><button type="button" class="btn bg-gradient-primary">Back</button> &nbsp; <button type="button" class="btn bg-gradient-primary">Save</button></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.tab-content -->
+                        </div><!-- /.card-body -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
