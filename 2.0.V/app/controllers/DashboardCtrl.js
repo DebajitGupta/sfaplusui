@@ -205,7 +205,6 @@
             function getCompany() {
                 am4core.useTheme(am4themes_animated);
                 // Themes end
-
                 // Create chart instance
                 var chart = am4core.create("chartcomp", am4charts.XYChart3D);
 
